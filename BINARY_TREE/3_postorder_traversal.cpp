@@ -18,7 +18,7 @@ struct node *create_node(int value)
 }
 //      4
 //     / \
-    //    1   6
+      1   6
 //   / \
     //  5   2
 void postorder(struct node *root)

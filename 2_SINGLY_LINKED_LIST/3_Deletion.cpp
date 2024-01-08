@@ -114,4 +114,5 @@ int main(){
     displayLinkedlist(head);
     head=DeleteAtend(head);
     displayLinkedlist(head);
+    
 }
