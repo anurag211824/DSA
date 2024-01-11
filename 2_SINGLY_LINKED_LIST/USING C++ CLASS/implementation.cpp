@@ -12,9 +12,9 @@ public:
         next = NULL;
     }
 };
-// Function to insert a new node with a given value at the beginning of a linked list
+
 void insertAThead(NODE *&head, int value) 
-{
+{    // Function to insert a new node with a given value at the beginning of a linked list
     // Create a new node with the given value
     NODE *new_node = new NODE(value);
 
@@ -145,9 +145,10 @@ void DeleteAlternate1(NODE *&head)
     }
 }
 
-// Function to delete alternate nodes from a linked list
+
 void DeleteAlternate2(NODE *head)
-{
+{    // Function to delete alternate nodes from a linked list
+
     // Initialize a pointer to traverse the linked list
     NODE *ptr = head;
 
