@@ -80,6 +80,15 @@ int main()
     root->left->left->right = new TreeNode(0);
     root->left->right->left = new TreeNode(7);
     root->left->right->right = new TreeNode(6);
-    
+
+    /*    3
+         / \
+        2   4
+       / \ / \
+      8  7 5  6
+     / \ / \
+    2  0 7  6
+
+    */
     root->level_order_traversal(root);
 }
