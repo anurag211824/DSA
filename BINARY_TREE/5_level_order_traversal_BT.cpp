@@ -38,7 +38,7 @@ void TreeNode::level_order_traversal(TreeNode *root)
         cout << "Root of tree don't exits";
         return;
     }
-    queue<TreeNode *> q; // queue data structure used
+    queue<TreeNode*> q; // queue data structure used
     q.push(root);
     while (!q.empty())
     {

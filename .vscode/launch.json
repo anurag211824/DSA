@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/ak066/Documents/DSA/LEETCODE_PROBLEMS",
-      "program": "c:/Users/ak066/Documents/DSA/LEETCODE_PROBLEMS/build/Debug/outDebug",
+      "cwd": "c:/Users/ak066/Documents/DSA/BINARY_TREE",
+      "program": "c:/Users/ak066/Documents/DSA/BINARY_TREE/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
