@@ -1,29 +1,27 @@
 #include <iostream>
-#include <malloc.h>
-
 using namespace std;
-struct node
-{
+
+class Node {
+public:
     int data;
-    struct node *left;
-    struct node *right;
+    Node* left;
+    Node* right;
+
+    // Constructor to create a new node
+    Node(int value) {
+        data = value;
+        left = NULL;
+        right = NULL;
+    }
 };
-struct node *create_node(int value)
-{
-    struct node *newnode = (struct node *)malloc(sizeof(struct node));
-    newnode->data = value;
-    newnode->left = NULL;
-    newnode->right = NULL;
-    return newnode;
-}
 //      4
 //     / \
 //    1   6
 //   / \
 //  5   2
 
-void preorder(struct node *root)
-{
+// Preorder traversal: Root → Left → Right
+void preorder(Node* root) {
     if (root == NULL)
         return;
 
@@ -31,15 +29,15 @@ void preorder(struct node *root)
     preorder(root->left);
     preorder(root->right);
 }
-int main()
-{
-    struct node *root = create_node(4);
-    struct node *p1 = create_node(1);
-    struct node *p2 = create_node(6);
-    struct node *p3 = create_node(5);
-    struct node *p4 = create_node(2);
 
-    // linking of nodes together to form tree
+int main() {
+    Node* root = new Node(4);
+    Node* p1 = new Node(1);
+    Node* p2 = new Node(6);
+    Node* p3 = new Node(5);
+    Node* p4 = new Node(2);
+
+    // Linking of nodes together to form tree
     root->left = p1;
     root->right = p2;
     p1->left = p3;

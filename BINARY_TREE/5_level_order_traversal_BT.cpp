@@ -1,19 +1,9 @@
 #include <iostream>
-#include <bits/stdc++.h>
+#include <vector>
+#include <queue>
 
 using namespace std;
-struct treeNode
-{
-    int data;
-    treeNode *left;
-    treeNode *right;
 
-    treeNode(int value)
-    {
-        data = value;
-        left = right = NULL;
-    }
-};
 class TreeNode
 {
 public:
@@ -27,18 +17,17 @@ public:
         left = NULL;
         right = NULL;
     }
-
-    void level_order_traversal(TreeNode *root);
 };
-void TreeNode::level_order_traversal(TreeNode *root)
+
+void level_order_traversal(TreeNode *root)
 {
     vector<vector<int>> ans; // vector to store the level order traversal of binary tree
     if (root == NULL)
     {
-        cout << "Root of tree don't exits";
+        cout << "Root of tree doesn't exist";
         return;
     }
-    queue<TreeNode*> q; // queue data structure used
+    queue<TreeNode *> q; // queue data structure used
     q.push(root);
     while (!q.empty())
     {
@@ -66,9 +55,9 @@ void TreeNode::level_order_traversal(TreeNode *root)
         cout << endl;
     }
 }
+
 int main()
 {
-
     TreeNode *root = new TreeNode(3);
     root->left = new TreeNode(2);
     root->right = new TreeNode(4);
@@ -90,5 +79,7 @@ int main()
     2  0 7  6
 
     */
-    root->level_order_traversal(root);
+    level_order_traversal(root);
+
+    return 0;
 }
